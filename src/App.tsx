@@ -6,6 +6,7 @@ import {Suspense} from "react";
 
 import Tank from "components/Tank";
 import Tile, {Zone} from "components/Tile";
+import Infantry from "components/Infantry";
 
 const Tiles: Array<Zone> = [
     {
@@ -209,8 +210,56 @@ const Tiles: Array<Zone> = [
         asset: "belgian-congo.gltf"
     },
     {
+        name: "Angola",
+        asset: "angola.gltf"
+    },
+    {
+        name: "Union of South Africa",
+        asset: "south-africa.gltf"
+    },
+    {
+        name: "West South Africa Sea Zone",
+        asset: "west-south-africa-sea.gltf"
+    },
+    {
         name: "Turkey",
         asset: "turkey.gltf"
+    },
+    {
+        name: "Angol Egypt Sudan",
+        asset: "anglo-egypt-sudan.gltf"
+    },
+    {
+        name: "Saudi Arabia Sea Zone",
+        asset: "saudi-arabia-sea.gltf"
+    },
+    {
+        name: "Syria Iraq",
+        asset: "syria-iraq.gltf"
+    },
+    {
+        name: "Saudi Arabia",
+        asset: "saudi-arabia.gltf"
+    },
+    {
+        name: "Italian East Africa",
+        asset: "italian-east-africa.gltf"
+    },
+    {
+        name: "Kenya Rhodesia",
+        asset: "kenya-rhodesia.gltf"
+    },
+    {
+        name: "Mozambique",
+        asset: "mozambique.gltf"
+    },
+    {
+        name: "Mozambique Sea Zone",
+        asset: "mozambique-sea.gltf"
+    },
+    {
+        name: "East South Africa Sea Zone",
+        asset: "east-south-africa-sea.gltf"
     }
 ];
 
@@ -229,6 +278,9 @@ const App: React.FC = () => {
                     {Tiles.map((zone) => (
                         <Tile {...zone} />
                     ))}
+                    <Infantry position={[0, 0, 0]} />
+                    {/* <Infantry position={[-2.05, 3.0, -0.0]} /> */}
+                    {/* <Infantry position={[-2.05, 2.5, -0.0]} /> */}
 
                     <OrbitControls />
                     <Environment preset="sunset" />
